@@ -1,0 +1,13 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  username: MyString
+  is_client: false
+  bio: MyString
+  image: MyString
+
+two:
+  username: MyString
+  is_client: false
+  bio: MyString
+  image: MyString
