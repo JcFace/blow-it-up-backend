@@ -6,7 +6,7 @@ class CreateArtPieces < ActiveRecord::Migration[6.0]
       t.string :description
       t.string :img_url
       t.string :price
-      t.references :user, null: false, foreign_key: true
+      t.boolean :owned
 
       t.timestamps
     end
