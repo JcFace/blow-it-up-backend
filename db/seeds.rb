@@ -6,10 +6,13 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 require 'faker'
+User.delete_all
+ArtPiece.delete_all
 
-# User.create(username: Faker::Name.unique.name, is_client: false, bio: Faker::Hipster.paragraph(sentence_count: 2, supplemental: true, random_sentences_to_add: 4), img_url: "Not and actual Url")
-# User.create(username: Faker::Name.unique.name, is_client: false, bio: Faker::Hipster.paragraph(sentence_count: 2, supplemental: true, random_sentences_to_add: 4), img_url: "Not and actual Url")
-# User.create(username: Faker::Name.unique.name, is_client: false, bio: Faker::Hipster.paragraph(sentence_count: 2, supplemental: true, random_sentences_to_add: 4), img_url: "Not and actual Url")
-# User.create(username: Faker::Name.unique.name, is_client: false, bio: Faker::Hipster.paragraph(sentence_count: 2, supplemental: true, random_sentences_to_add: 4), img_url: "Not and actual Url")
+u1 = User.create(full_name: 'James Garrison', email: '123@bam.com', password: 'password', is_client: true)
+u2 = User.create(full_name: 'James Patrickson',email: '456@bam.com', password: 'password', is_client: false)
+u3 = User.create(full_name: 'James Madison',email: '789@bam.com', password: 'password', is_client: false)
+p1 = ArtPiece.create(name: "Cool Thing", img_url: "A Url", price: "$10.99", creator_name: u2.full_name)
+p2 = ArtPiece.create(name: "Not A Cool Thing", img_url: "Some Url", price: "$1.99", creator_name: u3.full_name)
+p3 = ArtPiece.create(name: "Another Cool Thing", img_url: "The Url", price: "$1000.99", creator_name: u2.full_name)
 
-# p1 = ArtPiece.create(name: "Cool Thing", img_url: "A Url", price: "$10.99", user_id: 2)
