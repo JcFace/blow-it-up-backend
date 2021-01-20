@@ -44,8 +44,10 @@ class UsersController < ApplicationController
 
 
     def update
-    #    user = User.find(user_params) 
-    #    user.update
+        # byebug
+       @user = User.find(params[:id]) 
+       @user.update(signup_params)
+       render json: @user
     end
 
     def delete
@@ -56,6 +58,10 @@ class UsersController < ApplicationController
 
     def user_params
        params.permit(:email, :password)
+    end
+
+    def signup_params
+        params.require(:user).permit(:full_name, :is_client, :bio, :img_url, :username, :id)
     end
 
 end
