@@ -32,6 +32,7 @@ class UsersController < ApplicationController
     end
 
     def login
+        # byebug
         @user = User.find_by(email: params[:email])
         if @user && @user.authenticate(params[:password])
             payload = {user_id: @user.id}
@@ -42,18 +43,23 @@ class UsersController < ApplicationController
         end
     end
 
-
+    
+    
     def update
         # byebug
-       @user = User.find(params[:id]) 
-       @user.update(signup_params)
-       render json: @user
+        @user = User.find(params[:id]) 
+        @user.update(signup_params)
+        render json: @user
     end
-
+    
     def delete
-
+        
     end
-
+    
+    def profile
+        render json: {user: current_user}, status: :accepted
+    end
+    
     private
 
     def user_params
