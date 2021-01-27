@@ -10,15 +10,15 @@ class ArtPiecesController < ApplicationController
         render json: @art_piece
     end
 
-    def create
-        @art_piece = ArtPiece.new(art_piece_params)
-        if @art_piece.save
-            render json: @art_piece
-        end
-    end
+    # def create
+    #     @art_piece = ArtPiece.new(art_piece_params)
+    #     if @art_piece.save
+    #         render json: @art_piece
+    #     end
+    # end
 
     def update
-        
+
     end
 
     private

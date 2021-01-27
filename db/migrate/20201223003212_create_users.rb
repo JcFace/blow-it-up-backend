@@ -8,6 +8,8 @@ class CreateUsers < ActiveRecord::Migration[6.0]
       t.boolean :is_client
       t.string :bio
       t.string :img_url
+      t.float :lat
+      t.float :lng
 
       t.timestamps
     end

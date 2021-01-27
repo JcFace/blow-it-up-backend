@@ -53,7 +53,7 @@ class UsersController < ApplicationController
     end
 
     def signup_params
-        params.require(:user).permit(:full_name, :is_client, :bio, :img_url, :username, :id)
+        params.require(:user).permit(:full_name, :is_client, :bio, :img_url, :username, :id, :lat, :lng)
     end
 
 end

@@ -49,6 +49,8 @@ ActiveRecord::Schema.define(version: 2021_01_14_183415) do
     t.boolean "is_client"
     t.string "bio"
     t.string "img_url"
+    t.float "lat"
+    t.float "lng"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
