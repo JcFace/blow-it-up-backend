@@ -10,6 +10,7 @@ class CreateUsers < ActiveRecord::Migration[6.0]
       t.string :img_url
       t.float :lat
       t.float :lng
+      t.string :address
 
       t.timestamps
     end
